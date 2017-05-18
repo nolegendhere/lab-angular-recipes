@@ -1,0 +1,11 @@
+.dish-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+img{
+  width: 20vw;
+  height: 10vw;
+}

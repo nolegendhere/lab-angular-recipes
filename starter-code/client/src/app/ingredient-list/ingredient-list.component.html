@@ -1,0 +1,11 @@
+<h1> ingredient list to add </h1>
+<div class="ingredient-list">
+  <div *ngFor="let ingredient of ingredientsList">
+    <h3> {{ ingredient?.name }}&nbsp;</h3>
+    <div>
+      <label for="ingredient-quantity">Quantity</label>
+      <input type="number" #quantity>
+    </div>
+    <button (click)="addIngredient(ingredient,quantity.value)">Add Ingredient</button>
+  </div>
+</div>

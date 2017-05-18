@@ -1,0 +1,19 @@
+<!-- // template of entry-details component -->
+
+<h1> Dish details </h1>
+<a [routerLink]="['']"> Back to list </a>
+
+<div *ngIf="dish">
+  <div class="dish-info">
+    <h2> {{ dish.name }}&nbsp;</h2>
+    <h3> {{ dish.description }} </h3>
+    <img [src]='dish.image' />
+    <h3> Ingredients list! </h3>
+    <ul>
+      <li *ngFor="let ingredient of dish.ingredients">
+        <app-single-ingredient [ingredientInput]="ingredient"></app-single-ingredient>
+      </li>
+    </ul>
+    <app-ingredient-list></app-ingredient-list>
+  </div>
+</div>

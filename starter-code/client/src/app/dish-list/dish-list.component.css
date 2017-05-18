@@ -1,0 +1,10 @@
+.dish-list{
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.dish-list img{
+  width: 20vw;
+  height: 10vw;
+}
