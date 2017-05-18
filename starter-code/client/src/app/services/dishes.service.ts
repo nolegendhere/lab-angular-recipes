@@ -22,7 +22,7 @@ export class DishesService {
   get(id) {
      return this.http.get(`${this.BASE_URL}/api/dishes/${id}`)
        .map((res) =>{
-         this.dish = res.json();
+         this.dish = res.json(); //usado a la hora de añadir un ingrediente en ingredient-list
          return res.json();
        });
    }
@@ -33,7 +33,7 @@ export class DishesService {
         this.dishesList.forEach((dishInspected)=>{
           if(dish.name===dishInspected.name)
           {
-            dish.ingredients.push(ingredient);
+            dish.ingredients.push(ingredient); //not used
           }
         });
         return res.json();
